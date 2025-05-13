@@ -32,7 +32,7 @@ const Footer = () => {
                     GET IN TOUCH
                 </h2>
                 <ul>
-                    <li>+91 9990016780</li>
+                    <li>+91 8810518815</li>
                     <li>contact@Tomato.com</li>
                 </ul>
 
@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
         <hr />
         <p className="footer-copyright">
-            &copy; 2025 Tomato.com - All rights reserved
+            &copy; 2025 Tomato.com - All rights reserved | Designed by Chetan Shrivas
         </p>
 
     </div>
