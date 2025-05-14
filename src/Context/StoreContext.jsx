@@ -7,7 +7,7 @@ const StoreContextProvider = (props)=>{
 //---------------------------------------------------------------------------------------------------------
     // to add to cart and if added increase the quantity of the item
     const[cartItem , setCartItem] = useState({})
-    const url = "http://localhost:4000";
+    const url = "https://tomato-backend-seven.vercel.app";
     const [token , setToken] = useState(""); // this is for the token of the user
     const [food_list , setFoodList] = useState([]) ;
 
