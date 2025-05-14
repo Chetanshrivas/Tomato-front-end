@@ -73,3 +73,11 @@
 
 }
 
+@media (max-width: 379px){
+    .header-content h2{
+      font-weight: 500;
+      color: white;
+      font-size: max(4.5vw , 17px);
+}
+}
+
