@@ -43,7 +43,6 @@
 
 @media (max-width: 666px) {
     .place-order{
-       display: flex;
         align-items: start;
         justify-content: space-between;
         margin-top: 60px;
