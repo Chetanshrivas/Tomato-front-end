@@ -109,3 +109,10 @@
     }
     
 }
+
+@media (max-width : 500px ) {
+    .cart-items-item img{
+        width : 45px ; 
+    }
+    
+}
