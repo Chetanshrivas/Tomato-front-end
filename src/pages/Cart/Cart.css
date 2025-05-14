@@ -111,8 +111,13 @@
 }
 
 @media (max-width : 500px ) {
+    .cart-items-title{
+        display: grid;
+        grid-template-columns: 1fr 0.8fr 1fr 1fr 1fr 0.5fr;
+    }
+
     .cart-items-item img{
-        width : 45px ; 
+        width : 40px ; 
     }
     
 }
