@@ -2,10 +2,13 @@ import React, { useContext } from 'react'
 import './Cart.css'
 import { StoreContext } from '../../Context/StoreContext'
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Cart = () => {
 
-  const{cartItem , food_list , removeFromCart ,getTotalCartAmount , url} = useContext(StoreContext) ;
+  const{cartItem , food_list , removeFromCart ,getTotalCartAmount , url } = useContext(StoreContext) ;
+  const token = localStorage.getItem('token');
+
   const navigate = useNavigate() ;
 
   return (
@@ -69,7 +72,22 @@ const Cart = () => {
                          <b> &#8377; { getTotalCartAmount()===0?0:getTotalCartAmount() + 50}</b>
                        </div>
                      </div>
-                     <button onClick={()=>navigate('/order')} >PROCEED TO CHECKOUT</button>
+                        <button
+                          onClick={() => {
+                            if (getTotalCartAmount() === 0) {
+                              alert('Your cart is empty!');
+                              return;
+                            }
+
+                            if (token) {
+                              navigate('/order');
+                            } else {
+                              alert('Please log in first!');
+                            }
+                          }}
+                        >
+                          PROCEED TO CHECKOUT
+                        </button>
                   </div>
                 <div className="cart-promo">
                     <div>
