@@ -8,6 +8,9 @@ import Footer from './components/Footer/Footer.jsx'
 import LoginPopUp from './components/LoginPopUp/LoginPopUp.jsx'
 import Verify from './pages/Verify/Verify.jsx'
 import MyOrders from './pages/MyOrders/MyOrders.jsx'
+// 🟢 Toastify import
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const App = () => {
 
@@ -28,6 +31,28 @@ const App = () => {
       </Routes>
     </div>
     <Footer />
+
+        <ToastContainer
+          position="top-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+          limit={2} // limits number of toasts shown
+          style={{
+            width: '90%',
+            maxWidth: '400px',
+            margin: '0 20px',
+            fontSize: '14px',
+            wordBreak: 'break-word',
+          }}
+        />
+
   </>
 
 )}
